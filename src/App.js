@@ -56,7 +56,7 @@ export default class App extends React.Component {
         <div className="title text-center my-10 text-xl">
           <h1>TO-DO LIST using <span className="text-indigo-500 font-bold">REACT</span></h1>
         </div>
-        <div className="inputField text-center border py-10 mx-0 md:mx-20 lg:mx-60 bg-indigo-400 drop-shadow-lg">
+        <div className="inputField text-center border pt-10 pb-2 mx-0 md:mx-20 lg:mx-60 bg-indigo-400 drop-shadow-lg">
           <input
             className="border-2 p-2"
             placeholder="add task ..." 
@@ -72,13 +72,13 @@ export default class App extends React.Component {
           {this.state.list.map(item => { 
             return (
             <div className="list-items flex justify-center p-2 my-4">
-              <p className="p-2 px-6 bg-white border">
+              <p className="p-2 px-6 bg-white border rounded-full">
                 {item.value}
               </p>
               <button onClick={ () => this.deleteItem(item.id) }
-                className="ml-8 p-2 px-4 border border-black hover:border-red-700 bg-gray-200 hover:bg-red-100 text-black hover:text-red-700"
+                className="ml-6 text-gray-100 hover:text-red-700"
               >
-                <p>Delete</p>
+                <i className="fa fa-trash text-2xl"></i>
               </button>
             </div>
           )})}
