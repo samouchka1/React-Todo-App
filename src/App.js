@@ -82,6 +82,8 @@ export default class App extends React.Component {
               </button>
             </div>
           )})}
+          
+          <p id="signature" class="text-xs text-right mt-16 mr-0 md:mr-4 lg:mr-6 pr-0 lg:pr-8">&copy; {new Date().getFullYear()} samouchka</p>
 
         </div>
       </div>
