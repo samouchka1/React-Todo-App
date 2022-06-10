@@ -56,15 +56,15 @@ export default class App extends React.Component {
         <div className="title text-center my-10 text-xl">
           <h1>TO-DO LIST using <span className="text-indigo-500 font-bold">REACT</span></h1>
         </div>
-        <div className="inputField text-center border pt-10 pb-2 mx-0 md:mx-20 lg:mx-60 bg-indigo-400 drop-shadow-lg">
+        <div className="inputField text-center border pt-10 pb-2 mx-0 md:mx-20 lg:mx-60 bg-gradient-to-b from-indigo-900 to-blue-300 drop-shadow-lg rounded-md">
           <input
-            className="border-2 p-2"
+            className="border-2 p-2 rounded-md"
             placeholder="add task ..." 
             value = {this.state.userInput}
             onChange = {item => this.updateInput(item.target.value)}
           />
           <button
-            className="ml-8 p-2 border border-black bg-gray-200 hover:bg-gray-100"
+            className="ml-8 p-2 border border-black bg-gray-200 hover:bg-gray-100 rounded-md"
             onClick = {()=>this.addItem()}
           > Add 
           </button>
@@ -72,7 +72,7 @@ export default class App extends React.Component {
           {this.state.list.map(item => { 
             return (
             <div className="list-items flex justify-center p-2 my-4">
-              <p className="p-2 px-6 bg-white border rounded-full">
+              <p className="p-2 px-6 bg-white border rounded-md">
                 {item.value}
               </p>
               <button onClick={ () => this.deleteItem(item.id) }
