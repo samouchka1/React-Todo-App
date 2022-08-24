@@ -26,7 +26,7 @@ export default class App extends React.Component {
         value : this.state.userInput
       };
 
-      // Update list
+      // "... = copy list. Update list
       const list = [...this.state.list];
       list.push(userInput);
       // reset state
@@ -53,13 +53,15 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="title text-center my-10 text-xl">
-          <h1>TO-DO LIST using <span className="text-indigo-500 font-bold">REACT</span></h1>
+        
+      <div className="inputField text-center border pt-6 pb-2 my-16 mx-0 md:mx-20 lg:mx-60 bg-gradient-to-b from-indigo-900 to-blue-300 drop-shadow-lg rounded-md">
+        <div className="title caret-transparent text-center mt-10 mb-14 text-2xl text-indigo-50 font-semibold">
+          <h1>TO-DO APP</h1>
+            {/* using <span className="text-indigo-900 font-bold">REACT</span></h1> */}
         </div>
-        <div className="inputField text-center border pt-10 pb-2 mx-0 md:mx-20 lg:mx-60 bg-gradient-to-b from-indigo-900 to-blue-300 drop-shadow-lg rounded-md">
           <input
             className="border-2 p-2 rounded-md"
-            placeholder="add task ..." 
+            placeholder="..." 
             value = {this.state.userInput}
             onChange = {item => this.updateInput(item.target.value)}
           />
