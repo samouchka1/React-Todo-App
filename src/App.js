@@ -1,6 +1,10 @@
 import React from "react";
 import './App.css';
 
+const titleStyle = {
+  fontFamily: 'Permanent Marker, cursive'
+}
+
 export default class App extends React.Component {
   constructor(props){
     super(props)
@@ -56,7 +60,7 @@ export default class App extends React.Component {
         
       <div className="inputField text-center border pt-6 pb-2 my-16 mx-0 md:mx-20 lg:mx-60 bg-gradient-to-b from-indigo-900 to-blue-300 drop-shadow-lg rounded-md">
         <div className="title caret-transparent text-center mt-10 mb-14 text-2xl text-indigo-50 font-semibold">
-          <h1>TO-DO APP</h1>
+          <h1 style={titleStyle}>To-Do App</h1>
             {/* using <span className="text-indigo-900 font-bold">REACT</span></h1> */}
         </div>
           <input
